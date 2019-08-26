@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container">
+        <img class="img-responsive" src="{{ content['profile_image_url'] }}" width="400" height="225"/>
+    </div>
+    <div class="container">
+        {% for text in content['content_text'].split('\n') %}
+            <p align="justify">{{ text }}</p>
+        {% endfor %}
+    </div>
+{% endblock content %}
